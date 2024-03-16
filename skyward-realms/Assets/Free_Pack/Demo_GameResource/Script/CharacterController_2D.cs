@@ -21,7 +21,6 @@ public class CharacterController_2D : MonoBehaviour {
 
     public bool Once_Attack = false;
 
-
     // Use this for initialization
     void Start () {
         m_rigidbody = this.GetComponent<Rigidbody2D>();
@@ -149,18 +148,11 @@ public class CharacterController_2D : MonoBehaviour {
                 Filp();
         }
 
-        if (Input.GetKey(KeyCode.W))
+       
+        
+        if (Input.GetKey(KeyCode.Space))
         {
-           // Debug.Log("up");
             m_rigidbody.AddForce(Vector2.up * MoveSpeed);
-          
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-           // Debug.Log("Down");
-            m_rigidbody.AddForce(Vector2.down * MoveSpeed);
-          
-            
         }
 
 
