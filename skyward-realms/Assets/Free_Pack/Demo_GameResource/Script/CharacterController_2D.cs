@@ -150,13 +150,13 @@ public class CharacterController_2D : MonoBehaviour {
 
        
         
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && m_rigidbody.velocity.y == 0)
         {
-            m_rigidbody.AddForce(Vector2.up * MoveSpeed);
+            m_rigidbody.AddForce(Vector2.up * 50, ForceMode2D.Impulse);
         }
 
 
-     
+      
 
     }
 
